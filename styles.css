@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #296879;
+  --secundary-color: #6f99a5;
+
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e6f3f0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+
+  color: var(--secundary-color);
+}
+
+header .wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header p {
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  color: var(--secundary-color);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
