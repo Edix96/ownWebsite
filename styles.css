@@ -7,8 +7,11 @@
 :root {
   --primary-color: #296879;
   --secundary-color: #6f99a5;
+  --ligth-color: #e6f3f0;
 
   font-size: 62.5%;
+
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .wrapper {
@@ -23,7 +26,11 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #e6f3f0;
+  background-color: #8cedc1;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1 {
@@ -40,11 +47,44 @@ h3 {
   color: var(--secundary-color);
 }
 
+ul {
+  list-style: none;
+}
+
+@keyframes margin {
+  from {
+    margin: 0;
+    border-radius: 0;
+  }
+  to {
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+}
+
+header {
+  background-color: var(--ligth-color);
+  animation: margin 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  transition: var(--transition);
+}
+
 header .wrapper {
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+}
+
+.profile-img img {
+  width: 25rem;
+  border-radius: 5%;
+
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 header p {
@@ -54,15 +94,25 @@ header p {
   color: var(--secundary-color);
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
+#social-media {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 3rem;
 }
 
-.fa-facebook {
-  background: #3b5998;
-  color: white;
+#social-media ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+#social-media a svg {
+  color: var(--secundary-color);
+  transition: var(--transition);
+}
+
+#social-media a svg:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
 }
