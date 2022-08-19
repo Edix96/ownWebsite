@@ -10,7 +10,50 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Eduardo Paulos - Web Developer</title>
   </head>
-  <body>
+  <body class="">
+    <nav>
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <img src="assets/logos/logo.svg " alt="Eduardo Paulos" />
+        </a>
+
+        <div class="theme-change">
+          <button
+            aria-expanded="false"
+            aria-label="Change theme to dark"
+            onclick="changeTheme('ligth')"
+            class="ligth-theme"
+          >
+            <i data-feather="sun"></i>
+          </button>
+
+          <button
+            aria-expanded="false"
+            aria-label="Change theme to ligth"
+            onclick="changeTheme()"
+            class="dark-theme"
+          >
+            <i data-feather="moon"></i>
+          </button>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Open menu"
+          onclick="openMenu()"
+          class="menu-btn"
+        >
+          <i data-feather="menu"></i>
+        </button>
+
+        <div class="menu">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
     <header>
       <div class="wrapper">
         <div id="profile-img" class="profile-img">
@@ -22,25 +65,35 @@
           <h1>Eduardo Paulos.</h1>
           <p>In a nutshell, I'm a Web Developer, based in Portugal.</p>
         </div>
-      
 
-      <section id="social-media">
+        <section id="social-media">
           <ul>
-            <li><a href="https://github.com/Edix96" target="_blank"><i data-feather="github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/eduardo-paulos/" target="_blank"><i data-feather="linkedin"></i></a></li>
-            <li><a href="https://twitter.com/edupaulos96" target="_blank"><i data-feather="twitter"></i></a></li>
+            <li>
+              <a href="https://github.com/Edix96" target="_blank"
+                ><i data-feather="github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/eduardo-paulos/"
+                target="_blank"
+                ><i data-feather="linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/edupaulos96" target="_blank"
+                ><i data-feather="twitter"></i
+              ></a>
+            </li>
           </ul>
-        </div>
-
+        </section>
+      </div>
     </header>
 
-    
-
     <script>
-      feather.replace()
+      feather.replace();
     </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
-
   </body>
 </html>

@@ -1,3 +1,4 @@
+/*===========GERAL===========*/
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +6,9 @@
 }
 
 :root {
-  --primary-color: #296879;
-  --secundary-color: #6f99a5;
-  --ligth-color: #e6f3f0;
+  --primary-color: hsl(193, 49%, 32%);
+  --secundary-color: hsl(193, 23%, 54%);
+  --ligth-color: hsl(166, 35%, 93%);
 
   font-size: 62.5%;
 
@@ -50,6 +51,96 @@ h3 {
 ul {
   list-style: none;
 }
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ============NAVBAR============ */
+
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 3rem;
+  width: 100vw;
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+
+  margin: 0 1rem 0 1rem;
+}
+
+nav .menu {
+  display: none;
+}
+
+nav .wrapper .logo {
+  flex-grow: 1;
+}
+
+nav .dark-theme {
+  display: none;
+  visibility: hidden;
+}
+
+nav img {
+  width: 4rem;
+  height: 4rem;
+}
+
+nav svg {
+  color: var(--primary-color);
+}
+
+/* ============THEME============ */
+
+.theme-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 1rem;
+}
+
+body.dark {
+  background-color: var(--primary-color);
+}
+
+body.dark header {
+  background-color: var(--secundary-color);
+}
+
+body.dark .dark-theme {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+body.dark .ligth-theme {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.dark h1,
+body.dark h3,
+body.dark p {
+  color: var(--ligth-color);
+}
+
+body.dark svg {
+  color: var(--ligth-color);
+}
+
+/* ============HEADER============ */
 
 @keyframes margin {
   from {
