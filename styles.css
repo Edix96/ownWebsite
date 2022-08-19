@@ -62,6 +62,8 @@ button {
 
 nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   height: var(--nav-height);
 
@@ -69,17 +71,20 @@ nav {
   top: 3rem;
   width: 100vw;
 
+  transition: var(--transition);
+
   z-index: 100;
 }
 
 nav .wrapper {
   display: flex;
+  flex-direction: row;
   align-items: center;
 
-  margin: 0 1rem 0 1rem;
+  padding: 0 3rem 0 3rem;
 }
 
-nav .menu {
+.menu {
   display: none;
 }
 
@@ -138,6 +143,52 @@ body.dark p {
 
 body.dark svg {
   color: var(--ligth-color);
+}
+
+/* ============MENU============ */
+
+.close-btn {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+
+  top: calc(50vh - 4rem);
+  right: 0;
+
+  width: 20rem;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.1rem;
+
+  gap: 2.4rem;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+body.menu-expanded nav,
+body.menu-expanded header {
+  transform: translateX(-25rem);
+}
+
+body.menu-expanded .menu-btn {
+  display: none;
+}
+
+body.menu-expanded .close-btn,
+body.menu-expanded .menu {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ============HEADER============ */

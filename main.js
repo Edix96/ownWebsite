@@ -7,6 +7,14 @@ function changeTheme(currentTheme) {
   }
 }
 
+function openMenu() {
+  document.body.classList.add("menu-expanded");
+}
+
+function closeMenu() {
+  document.body.classList.remove("menu-expanded");
+}
+
 ScrollReveal({
   delay: 1000,
   origin: "top",

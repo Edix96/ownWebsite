@@ -46,13 +46,24 @@
           <i data-feather="menu"></i>
         </button>
 
-        <div class="menu">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <button
+          aria-expanded="false"
+          aria-label="Close menu"
+          onclick="closeMenu()"
+          class="close-btn"
+        >
+          <i data-feather="x"></i>
+        </button>
       </div>
     </nav>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
 
     <header>
       <div class="wrapper">
